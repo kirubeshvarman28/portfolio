@@ -850,3 +850,148 @@ span {
         width: 100%;
     }
 }
+
+/* Responsive Design Media Queries */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .projects {
+        padding-bottom: 7rem;
+    }
+
+    .education,
+    .certificates {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+    }
+
+    header.sticky {
+        background: #000;
+        border-bottom: 1px solid #b74b4b;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: #161616;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 4.5rem;
+    }
+
+    .modal-content {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .modal-images-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .close {
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    .zoom-nav-container {
+        gap: 1rem;
+    }
+
+    .zoom-prev,
+    .zoom-next {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s ease;
+}
+
+#menu-icon:hover {
+    color: #b74b4b;
+}
+
+header.sticky {
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 9%;
+    border-bottom: 2px solid #b74b4b;
+    backdrop-filter: blur(10px);
+}

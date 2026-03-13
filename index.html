@@ -22,6 +22,7 @@
             <a href="#certificates">Certificates</a>
             <a href="#contact">Contact</a>
         </nav>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
     </header>
     <section class="home" id="home">
         <div class="home-img">
@@ -249,6 +250,13 @@
     <script>
         let sections = document.querySelectorAll('section');
         let navLinks = document.querySelectorAll('header nav a');
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('nav');
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('fa-xmark');
+            navbar.classList.toggle('active');
+        };
 
         window.onscroll = () => {
             sections.forEach(sec => {
@@ -264,6 +272,14 @@
                     });
                 };
             });
+
+            /* Sticky Header */
+            let header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 100);
+
+            /* Remove menu icon and navbar when scroll */
+            menuIcon.classList.remove('fa-xmark');
+            navbar.classList.remove('active');
         };
 
         let currentProjectImages = [];
