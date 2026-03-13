@@ -64,38 +64,7 @@ nav a.active {
     border-bottom: 3px solid #b74b4b;
 }
 
-@media(max-width:995px) {
-    nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
-    }
-}
+/* Base media queries removed for consolidation */
 
 section {
     min-height: 100vh;
@@ -252,31 +221,9 @@ span {
     }
 }
 
-@media (max-width: 1000px) {
-    .home {
-        gap: 4rem;
-    }
-}
+/* Consolidated into media queries below */
 
-@media(max-width:995px) {
-    .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
+/* Consolidated into media queries below */
 
 /* Services */
 .heading {
@@ -845,16 +792,14 @@ span {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .contact form .input-box input {
-        width: 100%;
-    }
-}
-
 /* Responsive Design Media Queries */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
+    }
+
+    .home {
+        gap: 4rem;
     }
 }
 
@@ -867,32 +812,36 @@ span {
         padding: 10rem 4% 2rem;
     }
 
-    .services {
-        padding-bottom: 7rem;
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 5rem;
     }
 
-    .projects {
-        padding-bottom: 7rem;
+    .home-content h1 {
+        font-size: 5rem;
     }
 
-    .education,
-    .certificates {
-        padding-bottom: 7rem;
+    .home-content h3 {
+        font-size: 2.5rem;
     }
 
-    .contact {
-        min-height: auto;
+    .home-img img {
+        width: 50vw;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
-@media (max-width: 895px) {
+@media (max-width: 768px) {
     #menu-icon {
         display: block;
-    }
-
-    header.sticky {
-        background: #000;
-        border-bottom: 1px solid #b74b4b;
     }
 
     nav {
@@ -905,6 +854,7 @@ span {
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
+        z-index: 100;
     }
 
     nav.active {
@@ -915,31 +865,18 @@ span {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-    }
-
-    .home {
-        flex-direction: column-reverse;
-    }
-
-    .home-content h3 {
-        font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
+        margin-left: 0;
+        text-align: center;
     }
 
     .home-img img {
         width: 70vw;
-        margin-top: 4rem;
     }
 
     .projects-container {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 768px) {
     .heading {
         font-size: 4.5rem;
     }
@@ -947,6 +884,7 @@ span {
     .modal-content {
         padding: 2rem;
         width: 95%;
+        margin-top: 10%;
     }
 
     .modal-images-grid {
@@ -959,12 +897,11 @@ span {
         font-size: 40px;
     }
 
-    .zoom-nav-container {
-        gap: 1rem;
+    .zoom-content {
+        max-width: 95%;
     }
 
-    .zoom-prev,
-    .zoom-next {
+    .zoom-prev, .zoom-next {
         font-size: 3rem;
         padding: 1rem;
     }
@@ -973,6 +910,14 @@ span {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .home-img img {
+        width: 80vw;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
     }
 }
 
@@ -991,7 +936,7 @@ span {
 header.sticky {
     margin-top: 0;
     background: rgba(0, 0, 0, 0.9);
-    padding: 1rem 9%;
+    padding: 1rem 4%;
     border-bottom: 2px solid #b74b4b;
     backdrop-filter: blur(10px);
 }
