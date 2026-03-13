@@ -793,6 +793,28 @@ span {
 }
 
 /* Responsive Design Media Queries */
+/* Base Toggle Styles */
+#menu-icon {
+    font-size: 3.6rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s ease;
+    z-index: 1001;
+}
+
+#menu-icon:hover {
+    color: #b74b4b;
+}
+
+header.sticky {
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 4%;
+    border-bottom: 2px solid #b74b4b;
+    backdrop-filter: blur(10px);
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -899,44 +921,43 @@ span {
 
     .zoom-content {
         max-width: 95%;
+        border-width: 1px;
     }
 
     .zoom-prev, .zoom-next {
-        font-size: 3rem;
-        padding: 1rem;
+        font-size: 4rem;
+        padding: 3rem; /* Significantly larger touch/tap target */
     }
 }
 
 @media (max-width: 450px) {
     html {
-        font-size: 50%;
+        font-size: 48%; /* Slightly smaller base */
+    }
+
+    .heading {
+        font-size: 3.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.4rem; /* Guaranteed to fit on 320px-375px */
     }
 
     .home-img img {
         width: 80vw;
+        margin-top: 2.5rem;
     }
 
     .contact form .input-box input {
         width: 100%;
     }
+
+    .close-zoom {
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        opacity: 0.8;
+    }
 }
 
-#menu-icon {
-    font-size: 3.6rem;
-    color: white;
-    cursor: pointer;
-    display: none;
-    transition: 0.3s ease;
-}
-
-#menu-icon:hover {
-    color: #b74b4b;
-}
-
-header.sticky {
-    margin-top: 0;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem 4%;
-    border-bottom: 2px solid #b74b4b;
-    backdrop-filter: blur(10px);
-}
+/* Consolidated Media Queries handled above */
