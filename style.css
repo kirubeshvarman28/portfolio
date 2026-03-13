@@ -811,7 +811,6 @@ header.sticky {
     margin-top: 0;
     background: rgba(0, 0, 0, 0.9);
     padding: 1rem 4%;
-    border-bottom: 2px solid #b74b4b;
     backdrop-filter: blur(10px);
 }
 
