@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <a href="#" class="logo">Kirubesh</a>
+        <a href="#" class="logo">My Portfolio</a>
 
         <nav>
             <a href="#home" class="active"> Home</a>
@@ -25,10 +25,10 @@
         <i class="fa-solid fa-bars" id="menu-icon"></i>
     </header>
     <section class="home" id="home">
-        <div class="home-img">
+        <div class="home-img reveal-left">
             <img src="main.png" alt="">
         </div>
-        <div class="home-content">
+        <div class="home-content reveal-right">
             <h1>Hi, It's <span>Kirubeshvarman</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
             <p>I am a passionate developer focused on building efficient, user-friendly, and modern digital solutions. I
@@ -36,34 +36,34 @@
                 technologies to improve my skills. My goal is to create impactful projects that combine creativity,
                 performance, and innovation.</p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/kirubeshvarman28"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/_kazutora__28__"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/kirubeshvarman28" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/_kazutora__28__" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <a href="#contact" class="btn">Hire me</a>
         </div>
     </section>
 
     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
+        <h2 class="heading reveal">My <span>Services</span></h2>
         <div class="services-container">
-            <div class="services-box">
+            <div class="services-box reveal-flip reveal-stagger-1">
                 <i class="fa-solid fa-microchip"></i>
                 <h3>IoT Solutions</h3>
                 <p>Developing real-time safety monitoring systems and hardware-software integrations like SafeLink.</p>
             </div>
-            <div class="services-box">
+            <div class="services-box reveal-flip reveal-stagger-2">
                 <i class="fa-solid fa-code"></i>
                 <h3>Full-Stack Development</h3>
                 <p>Building scalable, secure web applications using Flask, Node.js, and modern front-end frameworks.</p>
             </div>
-            <div class="services-box">
+            <div class="services-box reveal-flip reveal-stagger-3">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Data Visualization</h3>
                 <p>Creating interactive analytics dashboards and data-driven insights using Chart.js and D3.js.</p>
             </div>
-            <div class="services-box">
+            <div class="services-box reveal-flip reveal-stagger-4">
                 <i class="fa-solid fa-palette"></i>
                 <h3>UI/UX Design</h3>
                 <p>Crafting premium, user-centric interfaces with a focus on dark aesthetics and seamless interaction.
@@ -73,9 +73,9 @@
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+        <h2 class="heading reveal">My <span>Skills</span></h2>
         <div class="skills-row">
-            <div class="skills-column">
+            <div class="skills-column reveal-left">
                 <h3 class="title">Coding Skills</h3>
                 <div class="skills-box">
                     <div class="skills-content">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skills-column">
+            <div class="skills-column reveal-right">
                 <h3 class="title">Professional Skills</h3>
                 <div class="skills-box">
                     <div class="skills-content">
@@ -125,9 +125,9 @@
     </section>
 
     <section class="education" id="education">
-        <h2 class="heading">My <span>Education</span></h2>
+        <h2 class="heading reveal">My <span>Education</span></h2>
         <div class="education-row">
-            <div class="education-column">
+            <div class="education-column reveal">
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
@@ -143,9 +143,9 @@
     </section>
 
     <section class="projects" id="projects">
-        <h2 class="heading">Latest <span>Projects</span></h2>
+        <h2 class="heading reveal">Latest <span>Projects</span></h2>
         <div class="projects-container">
-            <div class="projects-box"
+            <div class="projects-box reveal reveal-stagger-1"
                 onclick="openModal('syncroom', 'SyncRoom', 'A lightweight, real-time file-sharing platform designed for seamless collaboration over Local Area Networks (LAN). Create a room, share the code, and start transferring files instantly.', ['project-images/syncroom.png', 'project-images/syncroom-1.png', 'project-images/syncroom-2.png', 'project-images/syncroom-3.png', 'project-images/syncroom-4.png', 'project-images/syncroom-5.png'], ['Python', 'Flask', 'SQLite', 'SQLAlchemy', 'JavaScript', 'HTML5', 'CSS3'], 'https://github.com/kirubeshvarman28/Project---SyncRoom')">
                 <img src="project-images/syncroom.png" alt="">
                 <div class="projects-layer">
@@ -154,7 +154,7 @@
                     <i class="fa-solid fa-up-right-from-square"></i>
                 </div>
             </div>
-            <div class="projects-box"
+            <div class="projects-box reveal reveal-stagger-2"
                 onclick="openModal('helmet', 'SafeLink: IoT Safety Helmet', 'A real-time worker safety monitoring platform. Integrates IoT helmet hardware with a dashboard to provide critical telemetry data, tracking device health, and responding to emergencies instantly.', ['project-images/helmet.png', 'project-images/helmet.png'], ['Python', 'Flask', 'IoT', 'Chart.js', 'Tailwind CSS', 'ESP32', 'C++', 'SQLAlchemy'], 'https://github.com/kirubeshvarman28/Project---SafeLink---SaverHelmet')">
                 <img src="project-images/helmet.png" alt="">
                 <div class="projects-layer">
@@ -163,7 +163,7 @@
                     <i class="fa-solid fa-up-right-from-square"></i>
                 </div>
             </div>
-            <div class="projects-box"
+            <div class="projects-box reveal reveal-stagger-3"
                 onclick="openModal('trading', 'Professional Trading Journal', 'A high-performance trading journal designed for serious traders. Track performance, analyze psychology, and optimize your edge with advanced metrics and a proprietary Zella Score.', ['project-images/trading-journal.png', 'project-images/trading-journal.png'], ['Python', 'Flask', 'SQLite', 'Bootstrap 5', 'Chart.js', 'Jinja2', 'Flask-Login'], 'https://github.com/kirubeshvarman28/Project---Trading-Journal')">
                 <img src="project-images/trading-journal.png" alt="">
                 <div class="projects-layer">
@@ -207,9 +207,9 @@
     </div>
 
     <section class="certificates" id="certificates">
-        <h2 class="heading">My <span>Certificates</span></h2>
+        <h2 class="heading reveal">My <span>Certificates</span></h2>
         <div class="certificates-row">
-            <div class="certificates-column">
+            <div class="certificates-column reveal">
                 <div class="certificates-box">
                     <div class="certificates-content">
                         <div class="content">
@@ -233,17 +233,22 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#">
+        <h2 class="heading reveal">Contact <span>Me</span></h2>
+        <form action="https://formsubmit.co/kirubeshvarman28@gmail.com" method="POST" class="reveal">
+            <!-- FormSubmit Configuration Settings -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Message from Portfolio Website">
+
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -368,6 +373,44 @@
                     closeZoomModal();
                 }
             }
+        });
+
+        // Scroll Reveal Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-flip');
+            
+            const revealOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Triggers when 15% of the element is visible
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Un-comment the line below if you want the animation to occur ONLY ONCE
+                        // observer.unobserve(entry.target);
+                    } else {
+                        // Remove this else block if you want the animations to occur ONLY ONCE
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealObserver.observe(reveal);
+            });
+            
+            // Trigger immediately for elements already in viewport on load
+            setTimeout(() => {
+                reveals.forEach(reveal => {
+                    const rect = reveal.getBoundingClientRect();
+                    if(rect.top < window.innerHeight) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }, 100);
         });
     </script>
 </body>
