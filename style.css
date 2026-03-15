@@ -250,10 +250,10 @@ span {
 
 .services-container .services-box {
     background-color: #161616;
-    height: 350px;
+    height: auto;
     border-radius: 3rem;
     border: 0.2rem solid #b74b4b;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
     transition: 0.4s ease-in-out;
 }
@@ -274,7 +274,8 @@ span {
 }
 
 .services-box p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 1.6;
     margin: 1rem 0 3rem;
 }
 
@@ -826,7 +827,12 @@ header.sticky {
 
 @media (max-width: 991px) {
     header {
-        padding: 2rem 4%;
+        padding: 1.5rem 4%;
+        margin-top: 0;
+    }
+    
+    header.sticky {
+        padding: 1.5rem 4%;
     }
 
     section {
@@ -863,6 +869,7 @@ header.sticky {
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
+        margin-right: 1rem;
     }
 
     nav {
