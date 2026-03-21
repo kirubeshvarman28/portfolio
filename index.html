@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <canvas id="shard-cursor"></canvas>
+    <div id="floating-lines"></div>
     <header>
         <a href="#" class="logo">My Portfolio</a>
 
@@ -39,7 +41,8 @@
                 <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/kirubeshvarman28" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/_kazutora__28__" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/_kazutora__28__" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
             <a href="#contact" class="btn">Hire me</a>
         </div>
@@ -378,7 +381,7 @@
         // Scroll Reveal Animations
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-flip');
-            
+
             const revealOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -401,16 +404,34 @@
             reveals.forEach(reveal => {
                 revealObserver.observe(reveal);
             });
-            
+
             // Trigger immediately for elements already in viewport on load
             setTimeout(() => {
                 reveals.forEach(reveal => {
                     const rect = reveal.getBoundingClientRect();
-                    if(rect.top < window.innerHeight) {
+                    if (rect.top < window.innerHeight) {
                         reveal.classList.add('active');
                     }
                 });
             }, 100);
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="floating-lines.js"></script>
+    <script src="crimson-network.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            new FloatingLines('floating-lines', {
+                linesGradient: ["#4a0000", "#050505", "#2a0000"],
+                lineCount: [4, 4, 4],
+                animationSpeed: 0.7,
+                interactive: true,
+                bendRadius: 5,
+                bendStrength: -0.5,
+                mouseDamping: 0.05,
+                parallax: true,
+                parallaxStrength: 0.1
+            });
         });
     </script>
 </body>

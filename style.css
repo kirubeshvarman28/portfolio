@@ -16,11 +16,37 @@ html {
 }
 
 body {
+}
+
+a, button, .btn, i {
+}
+
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
     background-color: black;
     color: white;
+}
+
+#shard-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000; /* Extremely high to stay above everything else */
+    pointer-events: none;
+}
+
+#floating-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 header {
@@ -77,7 +103,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
+    background-color: transparent;
 }
 
 .home .home-content h1 {
@@ -180,12 +206,12 @@ span {
 
 .typing-text span::after {
     content: "";
-    background-color: black;
+    background-color: transparent;
     position: absolute;
-    width: calc(100% + 8px);
+    width: 2px;
     height: 100%;
-    border-left: 3px solid black;
-    right: -8;
+    border-left: 3px solid #b74b4b;
+    right: -8px;
     animation: cursor 0.6s infinite;
 }
 
@@ -235,7 +261,7 @@ span {
 }
 
 .services {
-    background: black;
+    background: transparent;
     color: white;
 }
 
@@ -295,7 +321,7 @@ span {
 
 /* Skills */
 .skills {
-    background: black;
+    background: transparent;
 }
 
 .skills .skills-row {
@@ -380,7 +406,7 @@ span {
 
 /* Projects */
 .projects {
-    background: black;
+    background: transparent;
 }
 
 .projects h2 {
@@ -460,7 +486,7 @@ span {
 
 /* Certificates */
 .certificates {
-    background: black;
+    background: transparent;
 }
 
 .certificates-row {
@@ -495,7 +521,7 @@ span {
 
 /* Education */
 .education {
-    background: black;
+    background: transparent;
 }
 
 .education-row {
@@ -769,7 +795,7 @@ span {
 
 /* Contact */
 .contact {
-    background: black;
+    background: transparent;
 }
 
 .contact h2 {
